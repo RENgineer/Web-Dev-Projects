@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Foster Website - Store - Product Page">
+        <meta name="author" content="Lauren Wheeler">
+        <title>FOSTER-Store</title>
+        <link href="/Users/ren/Desktop/Formal&& Professional/Foster Website/foster-stylesheet.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="parent">
+            <div class="header" id="header-banner">
+                <ul class="nav">
+                    <li><a href="home.html" class="nav-btn">Home</a></li> <!--home.website.com-->
+                    <li><a href="music.html" class="nav-btn">Music</a></li> <!--music.website.com-->
+                    <li><a href="videos.html" class="nav-btn">Videos</a></li> <!--videos.website.com-->
+                    <li><a href="store.html" class="nav-btn">Store</a></li> <!--store.website.com-->
+                </ul>
+            </div>
+        </div>
+        <!--add href to cart for cart page if necessary-->
+        <span>
+            <span class="cart-icon-placement-product-page">
+                    <div class="subheader-product-page">
+                        <a href="store.html"><button class="back-button">&#8249&nbsp&nbspBack</button></a>
+                        <button id="cart-modal" class="cart-graphic-product-page"><div class="cart-graphic-counter">1</div></button>
+                    </div>
+            </span>       
+            <div>
+                <img id="shirt1" alt="foster-red-tee" class="store-image-product-page" src="/Users/ren/Desktop/Formal&& Professional/Foster Website/foster-tee.png">
+            </div>    
+            <div class="product-page-opts">
+                    <!--chips and add to cart button here-->
+            </div>
+            <div class="product-page-desc">
+                <p id="foster-tee-title" class="product-page-title">Foster Tee</p>
+                <p id="foster-tee-desc" class="product-page-price">$60.00</p>
+            </div>
+        </span>
+        <div id="show-cart" class="cart-modal">
+            <div class="cart-modal-header">
+                <div class="cart-header">
+                    <h3 class="cart-subheader">Shopping Cart</h3>
+                    <h5 class="cart-remove-all">Remove all</h5>   
+                </div> 
+                <span class="close-btn">&times;</span>
+            </div>
+            <div class="cart-modal-content"> <!--one per item in the cart-->
+                <div class="cart-product-image-box">
+                    <img class="store-image-thin-border-inline" src="/Users/ren/Desktop/Formal&& Professional/Foster Website/foster-tee.png"><!-- style="{{ height="120px" }}" />-->
+                </div>
+                <div>
+                    <span>
+                        <h4 class="cart-product-image-title">Shirt 1</h4>
+                        <h5 class="cart-product-image-subtitle">Shirt desc</h5>
+                        <!--<class="cart-product-image-desc"img class="store-image" src="/Users/ren/Desktop/Formal&& Professional/Foster Website/moon-pic.png"> style={{ height=”30px” }}/>-->
+                    </span>
+                </div>
+                <div class="cart-product-image-counter">
+                    <!--<button class="cart-product-image-btn" onclick="counterFuncUp()">+</button>-->
+                    <div><input type="number" id="moon1-counter" class="cart-product-image-count" value="1" min="1" max="999"></div><!--id for js updating-->
+                    
+                    <!--<button class="cart-product-image-btn" onclick="counterFuncDown()">-</button>-->
+                </div>
+                <div class="cart-prices-section">
+                    <span>
+                        <div class="cart-prices-amount">$60.00</div>
+                        <div class="cart-product-save">Save for later</div>
+                        <div class="cart-product-remove">Remove</div>
+                    </span>
+                </div>
+            </div>
+            <div class="cart-modal-footer">
+                <!--<hr>-->
+                <div class="cart-checkout">
+                    <div>
+                        <span class="cart-checkout-total-section">
+                            <div class="cart-checkout-subtotal">Sub-Total</div> <!---->
+                            <div class="cart-checkout-items">1 items</div>
+                        </span>
+                    </div>
+                    <div class="cart-checkout-total-amount">$60.00</div>
+                    <button class="cart-checkout-btn">Checkout</button> <!--payment link (stripe or others)-->
+                </div>
+            </div>
+        </div>      
+        <script>
+        // Get the modal
+        //var header = document.getElementById("header-banner")
+        var modal = document.getElementById("show-cart");
+        var cartButton = document.getElementById("cart-modal");
+        var closeCartButton = document.getElementsByClassName("close-btn")[0];
+        
+        cartButton.onclick = function() {
+            modal.style.display = "block";
+            line.style.display = "none";
+            // header.style.display = "none";
+        }
+        closeCartButton.onclick = function() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+            modal.style.display = "none";
+            }
+        }
+        </script>
+
+        <!--<div class="footer">
+            <p>&copy; 2023 All Rights Reserved</p>
+        </div>-->
+    </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Foster Website - Store">
+        <meta name="author" content="Lauren Wheeler">
+        <title>FOSTER-Store</title>
+        <link href="/Users/ren/Desktop/Formal&& Professional/Foster Website/foster-stylesheet.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="parent">
+            <div class="header" id="header-banner">
+                <ul class="nav">
+                    <li><a href="home.html" class="nav-btn">Home</a></li> <!--home.website.com-->
+                    <li><a href="music.html" class="nav-btn">Music</a></li> <!--music.website.com-->
+                    <li><a href="videos.html" class="nav-btn">Videos</a></li> <!--videos.website.com-->
+                    <li><a href="store.html" class="nav-btn">Store</a></li> <!--store.website.com-->
+                </ul>
+            </div>
+        </div>
+        <!--add href to cart for cart page-->
+        <span class="right-align">
+            <span class="cart-icon-placement-store-page">
+                    <button id="cart-modal" class="cart-graphic"><div class="cart-graphic-counter">0</div></button>
+            </span>
+        </span>
+        <div id="show-cart" class="cart-modal">
+            <div class="cart-modal-header">
+                <div class="cart-header" style="border-top-left-radius:50%;">
+                    <h3 class="cart-subheader">Shopping Cart</h3>
+                    <!--<h5 class="cart-remove-all">Remove all</h5>-->  
+                </div> 
+                <span class="close-btn">&times;</span>
+            </div>
+            <div class="cart-modal-content">
+            </div>
+            <div class="cart-modal-footer">
+                <!--<hr>-->
+                <div class="cart-checkout" >
+                    <div>
+                        <span class="cart-checkout-total-section">
+                            <div class="cart-checkout-subtotal">Sub-Total</div> <!---->
+                            <div class="cart-checkout-items">0 items</div>
+                        </span>
+                    </div>
+                    <div class="cart-checkout-total-amount">$00.00</div>
+                    <button class="cart-checkout-btn">Checkout</button> <!--payment link (stripe or others)-->
+                </div>
+            </div>
+        </div>
+
+        <!--calculations script-->
+        <script src="/Users/ren/Desktop/Formal&& Professional/Foster Website/cart_calculations.js"></script>
+                
+        <script>
+        // Get the modal
+        //var header = document.getElementById("header-banner")
+        var modal = document.getElementById("show-cart");
+        var cartButton = document.getElementById("cart-modal");
+        var closeCartButton = document.getElementsByClassName("close-btn")[0];
+        
+        cartButton.onclick = function() {
+            modal.style.display = "block";
+            // header.style.display = "none";
+        }
+        closeCartButton.onclick = function() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+            modal.style.display = "none";
+            }
+        }
+        </script>
+                <!--
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+                <script src="jquery.js"></script>
+                <script src="jquery.sticky.js"></script>
+                <script>
+                    $(document).ready(function(){
+                        $(".cart-graphic").sticky({topSpacing:0});
+                    });
+                </script>-->
+            <!--</span>
+        </span>-->
+        <div class="heading"> <!--change with 'justify content' and 'padding' with the style tag or on the .css to be on the left-->
+            <h1 style="margin-top:60px">Store</h1>
+         </div> 
+        <!--<hr id="line" class="title-separation">--> <!--
+        <div class="store-image-div"> <!--six items per line if "store" is adjusted to be on the left-hand side; five (or four) otherwise
+            <a href="product-page.html"><div>
+                <img id="shirt1" alt="placeholder" class="store-image" src="/Users/ren/Desktop/Formal&& Professional/Foster Website/foster-tee.png">
+                <p id="shirt1-title" class="store-label-title">This is a shirt</p>
+                <p id="shirt1-desc" class="store-label-description">$60.00</p>
+            </div></a>
+            
+            <a href="product-page2.html"><div>
+                <img id="saucester-tee" alt="sauce-shirt" class="store-image" src="/Users/ren/Desktop/Formal&& Professional/Foster Website/saucester-tee-front.png">
+                <p id="shirt2-title" class="store-label-title">Saucester Tee</p>
+                <p id="shirt2-desc" class="store-label-description">$60.00</p>
+            </div></a>
+        </div>-->
+        <!--begin store layout revision-->
+        <section class="product-layout">
+            <div class="store-products">
+                <div class="product-box">
+                    <!--<a href="product-page.html">--><img id="shirt1" alt="" class="product-image" src="/Users/ren/Desktop/Formal&& Professional/Foster Website/foster-tee.png"><!--</a>-->
+                    <p id="shirt1-title" class="product-label-title">Foster Tee</p>
+                    <div class="product-label-price-and-atc-icon">$60.00<img class="cart-graphic-quick-add" src="/Users/ren/Desktop/Formal&& Professional/Foster Website/cart-icon-quick-add.png"></div>
+                </div>
+                <div class="product-box">
+                    <!--<a href="product-page2.html">--><img id="shirt2" alt="" class="product-image" src="/Users/ren/Desktop/Formal&& Professional/Foster Website/saucester-tee-front.png">
+                    <div class="overlay">
+                        <img id="shirt2-back" alt="" class="product-image" src="/Users/ren/Desktop/Formal&& Professional/Foster Website/saucester-tee-back.png"><!--</a>-->
+                    </div>
+                    <p id="shirt2-title" class="product-label-title">Saucester Tee</p>
+                    <div class="product-label-price-and-atc-icon">$60.00<img class="cart-graphic-quick-add" src="/Users/ren/Desktop/Formal&& Professional/Foster Website/cart-icon-quick-add.png"></div>
+                    <!--<script src="/Users/ren/Desktop/Formal&& Professional/Foster Website/product_views.js"></script>-->
+                </div>
+            </div>
+        </section>
+        <div class="footer">
+            <p>&copy; 2023 All Rights Reserved</p>
+        </div>
+    </body>
+</html>

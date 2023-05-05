@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Foster Website - Home">
+        <meta name="author" content="Lauren Wheeler">
+        <title>FOSTER-Home</title>
+        <link href="/Users/ren/Desktop/Formal&& Professional/Foster Website/foster-stylesheet.css" rel="stylesheet" type="text/css">
+        <!--<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+        <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script type="text/javascript">
+            function sendEmail() {
+              Email.send({
+                Host: "smtp.gmail.com",
+                Username: "sender@email_address.com",
+                Password: "Enter your password",
+                To: 'receiver@email_address.com',
+                From: "sender@email_address.com",
+                Subject: "Sending Email using javascript",
+                Body: "Well that was easy!!",
+              })
+                .then(function (message) {
+                  alert("mail sent successfully")
+                });
+            }
+        </script>-->
+    </head>  
+    <body>
+        <div class="parent">
+            <div class="header">
+                <ul class="nav" ><!--style="font-family:Swordskull Personal Use">change to more readable font-->
+                    <li><a href="home.html" class="nav-btn">Home</a></li> <!--home.website.com-->
+                    <li><a href="music.html" class="nav-btn">Music</a></li> <!--music.website.com-->
+                    <li><a href="videos.html" class="nav-btn">Videos</a></li> <!--videos.website.com-->
+                    <li><a href="store.html" class="nav-btn">Store</a></li> <!--store.website.com-->
+                </ul>
+            </div>
+        </div>
+        <!--<div>
+            <img id="regular-flower" alt="bl-flower" src="/Users/ren/Desktop/Formal&& Professional/Foster Website/flower-corner.png" class="decal">
+        </div>-->
+        <div class="parent">
+            <div class="big-image-container">
+                <!--<img id="moon-cycles-gif" alt=phases class="bigger-image" src="https://media.giphy.com/media/wud3ra4ApE8wPWZGDZ/giphy.gif">-->
+                <img id="sky-background" alt="sky3" class="big-image" src="/Users/ren/Desktop/Formal&& Professional/Foster Website/night sky photos.jpg">
+                <div class="centered-left">
+                    <img id="foster-face" class="half-profile-image" alt="profile" src="/Users/ren/Desktop/Formal&& Professional/Foster Website/foster-half-face-real.png">
+                </div>
+                <div class="centered">
+                    <h1>Paradise</h1>
+                </div>
+                <div class="centered-lower">
+                    <h2>FOSTER</h2>
+                </div>
+            </div>
+        </div>    
+        <div>
+            <div class=sign-up-space>
+                <div class="sign-up-div">
+                    <h3>Sign Up For Emails:<h3>
+                </div>
+                <span class="signup-form">
+                    <form action="submit_subscriber.php" method="POST">
+                        <label for="fname" class="signup-label">First Name:</label>
+                        <input type="text" id="fname" name="fname" style="width:167px" >
+                        <label for="lname" class="signup-label">Last Name:</label>
+                        <input type="text" id="lname" name="lname" style="width:200px">
+                        <br>
+                        <br>
+                        <span>
+                            <label for="email" class="signup-label">Email:</label>
+                            <input type="text" id="email" name="email" style="width:530px">
+                            <br>
+                            <br>
+                            <br>
+                            <span class="centered-submit">
+                                <input id="sbmt-btn" type="submit" value="SUBMIT" class="submit-btn">
+                            </span>
+                        </span>
+                    </form>
+                    <!--<script>
+                        var submitBtn = document.getElementById("sbmt-btn");
+
+                        submitBtn.onclick = function() {
+                            alert('clicked!')
+                            // header.style.display = "none";
+
+                        }
+                    </script>-->
+                    <script>
+                        function appendInfo() {
+                            //test js functionality within forms
+                            // Node.js program to demonstrate the
+                            // fs.appendFile() method
+                            
+                            // Import the filesystem module
+                            let fs = require('fs');
+                            alert('got here ')
+                            // Get the file contents before the append operation
+                            console.log("\nFile Contents of file before append:",
+                            fs.readFileSync("foster-distro.txt", "utf8"));
+                            
+                            fs.appendFile("foster-distro.txt", "World", (err) => {
+                            if (err) {
+                                console.log(err);
+                            }
+                            else {
+                                // Get the file contents after the append operation
+                                console.log("\nFile Contents of file after append:",
+                                fs.readFileSync("foster-distro.txt", "utf8"));
+                                
+                            }
+                            
+                            }
+                            ); }
+                    </script>
+                </span>
+                <div>
+                    <a href="#"><div class="social-media-btn" style="background-image: url(/Users/ren/Desktop/Formal&&\ Professional/Foster\ Website/facebook-logo.png);"></div></a>
+                    <a href="#"><div class="social-media-btn" style="background-image: url(/Users/ren/Desktop/Formal&&\ Professional/Foster\ Website/instagram-logo.png);"></div></a>
+                    <a href="#"><div class="social-media-btn" style="background-image: url(/Users/ren/Desktop/Formal&&\ Professional/Foster\ Website/twitter-logo.png);"></div></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>&copy; 2023 All Rights Reserved</p>
+        </div>
+    </body>
+
+</html>
